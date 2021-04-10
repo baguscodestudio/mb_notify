@@ -7,18 +7,23 @@ Displays notifications one by one (queue) so they can be spammed
 Simple and Beautiful UI (Credits to Material UI library for react)
 
 **How to use**
+Client Side
 ```
 exports['mb_notify']:sendNotification(yourMessage, options)
+```
+Server Side
+```
+TriggerClientEvent('mb_notify:sendNotification', source, yourMessage, options)
 ```
 
 ## Examples
 ```
-    exports['mb_notify']:sendNotification('this is default bottom center')
-    exports['mb_notify']:sendNotification('this is error type top center', {type="error", vertical="top"})
-	exports['mb_notify']:sendNotification('this is info type and filled variant top right', {type="info", vertical="top", horizontal="right", variant="filled"})
-	exports['mb_notify']:sendNotification('this is warning type and outlined variant bottom right', {type="warning", horizontal="right", variant='outlined'})
-	exports['mb_notify']:sendNotification('this is default top left with duration 1 second', {vertical='top', horizontal='left', duration=1000})
-	exports['mb_notify']:sendNotification('this is default bottom left', {horizontal='left'})
+exports['mb_notify']:sendNotification('this is default bottom center')
+exports['mb_notify']:sendNotification('this is error type top center', {type="error", vertical="top"})
+exports['mb_notify']:sendNotification('this is info type and filled variant top right', {type="info", vertical="top", horizontal="right", variant="filled"})
+exports['mb_notify']:sendNotification('this is warning type and outlined variant bottom right', {type="warning", horizontal="right", variant='outlined'})
+exports['mb_notify']:sendNotification('this is default top left with duration 1 second', {vertical='top', horizontal='left', duration=1000})
+exports['mb_notify']:sendNotification('this is default bottom left', {horizontal='left'})
 ```
 
 ## Options
